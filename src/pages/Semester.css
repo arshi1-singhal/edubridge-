@@ -1,0 +1,92 @@
+.page__inline-link {
+  text-decoration: underline;
+}
+
+/* ---------- Semester selection grid ---------- */
+.semester-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .semester-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .semester-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.semester-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.semester-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.semester-card__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mocha);
+}
+
+.semester-card__number {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+.semester-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--mocha);
+}
+
+.semester-card__arrow {
+  transition: transform 0.2s ease;
+}
+
+.semester-card:hover .semester-card__arrow {
+  transform: translateX(4px);
+}
+
+/* Decorative blurred glow in the corner */
+.semester-card__glow {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  background: rgba(238, 218, 193, 0.6);
+  filter: blur(2rem);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.semester-card:hover .semester-card__glow {
+  transform: scale(1.25);
+}

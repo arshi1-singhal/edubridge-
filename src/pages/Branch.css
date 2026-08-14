@@ -1,0 +1,104 @@
+.page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 64rem; /* max-w-5xl */
+}
+
+.page__title {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+@media (min-width: 768px) {
+  .page__title {
+    font-size: 3rem;
+  }
+}
+
+.page__desc {
+  max-width: 36rem;
+  margin-top: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* ---------- Branch selection grid ---------- */
+.branch-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .branch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .branch-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.branch-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.branch-card__icon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: var(--sand);
+  font-size: 1.5rem;
+}
+
+.branch-card__label {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+.branch-card__blurb {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.branch-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--mocha);
+}
+
+.branch-card__arrow {
+  transition: transform 0.2s ease;
+}
+
+.branch-card:hover .branch-card__arrow {
+  transform: translateX(4px);
+}

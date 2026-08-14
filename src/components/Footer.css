@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 6rem;
+  border-top: 1px solid rgba(220, 206, 187, 0.6);
+  background: rgba(252, 243, 230, 0.4);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footer__tagline {
+  font-family: var(--font-display);
+}

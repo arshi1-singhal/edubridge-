@@ -1,0 +1,75 @@
+.page__desc--wide {
+  max-width: 42rem;
+}
+
+/* ---------- Sheets grid ---------- */
+.sheets-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .sheets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sheet-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sheet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.sheet-card__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--sand);
+  font-size: 1.5rem;
+}
+
+.sheet-card__title {
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+.sheet-card__desc {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.sheet-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--mocha);
+}
+
+.sheet-card__arrow {
+  transition: transform 0.2s ease;
+}
+
+.sheet-card:hover .sheet-card__arrow {
+  transform: translateX(4px);
+}

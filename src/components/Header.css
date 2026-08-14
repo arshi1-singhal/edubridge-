@@ -1,0 +1,153 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid rgba(220, 206, 187, 0.6);
+  background: rgba(250, 242, 228, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* ---------- Logo ---------- */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__logo-badge {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.header__logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Desktop nav ---------- */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__navlink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(45, 29, 21, 0.7);
+  transition: color 0.2s ease;
+}
+
+.header__navlink:hover {
+  color: var(--foreground);
+}
+
+.header__navlink--active {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* ---------- Mobile menu button ---------- */
+.header__menu-btn {
+  display: none;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  transition: background 0.2s ease;
+}
+
+.header__menu-btn:hover {
+  background: var(--secondary);
+}
+
+/* ---------- Mobile drawer ---------- */
+.drawer {
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+
+.drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.drawer__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.drawer__close {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+
+.drawer__link {
+  display: block;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: rgba(45, 29, 21, 0.8);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.drawer__link:hover {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.drawer__link--active {
+  background: var(--secondary);
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+  .header__menu-btn {
+    display: grid;
+  }
+}
