@@ -3,6 +3,8 @@
 Bridging Minds With Education — verified senior-shared notes and practice sheets
 for engineering students, organised branch by branch, semester by semester.
 
+Live link https://arshi1-singhal.github.io/edubridge-/
+
 ## Tech Stack
 
 - React (JavaScript, ES6+)
